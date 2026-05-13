@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canopy: #0d2818;
+  --moss: #1f4d2e;
+  --leaf: #2d6a3e;
+  --sage: #6b9b7a;
+  --sage-soft: #b7cdba;
+  --bark: #3d2817;
+  --soil: #6b4423;
+  --cream: #f5f0e6;
+  --paper: #faf6ed;
+  --paper-warm: #f1ead8;
+  --gold: #d4a843;
+  --gold-soft: #e8c97a;
+  --rust: #b8543c;
+  --rust-deep: #8b3a26;
+  --ink: #0d2818;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canopy: var(--canopy);
+  --color-moss: var(--moss);
+  --color-leaf: var(--leaf);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-bark: var(--bark);
+  --color-soil: var(--soil);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-rust: var(--rust);
+  --color-rust-deep: var(--rust-deep);
+  --color-ink: var(--ink);
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(45, 106, 62, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(212, 168, 67, 0.05) 0%, transparent 40%);
+  min-height: 100vh;
+}
+
+.font-serif,
+h1.editorial,
+h2.editorial,
+h3.editorial {
+  font-family: var(--font-fraunces), "Fraunces", "Times New Roman", serif;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--moss);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+.eyebrow::before {
+  content: "❋";
+  margin-right: 10px;
+  color: var(--gold);
+}
+
+.editorial-rule {
+  border-bottom: 2px solid var(--canopy);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage-soft);
+  border: 2px solid var(--paper);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
+}
+
+.recharts-default-tooltip {
+  background: var(--canopy) !important;
+  border: 1px solid var(--gold) !important;
+  border-radius: 0 !important;
+  color: var(--cream) !important;
+  padding: 12px 14px !important;
+}
+.recharts-tooltip-label {
+  color: var(--gold) !important;
+  font-family: var(--font-fraunces), serif !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+}
+.recharts-tooltip-item {
+  color: var(--cream) !important;
+}
+
+.recharts-cartesian-axis-tick text,
+.recharts-polar-angle-axis-tick text,
+.recharts-polar-radius-axis-tick text,
+.recharts-legend-item-text {
+  fill: var(--bark) !important;
+  color: var(--bark) !important;
+  font-size: 11px;
+}
+
+.recharts-cartesian-grid line {
+  stroke: rgba(13, 40, 24, 0.08) !important;
 }

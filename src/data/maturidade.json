@@ -1,0 +1,71 @@
+{
+ "ref": [
+  {
+   "nivel": 1,
+   "faixa": "0% - 20%",
+   "classificacao": "Inicial",
+   "descricao": "Empresa sem práticas ESG estruturadas"
+  },
+  {
+   "nivel": 2,
+   "faixa": "20% - 40%",
+   "classificacao": "Básico",
+   "descricao": "Práticas iniciais, baixa conformidade"
+  },
+  {
+   "nivel": 3,
+   "faixa": "40% - 60%",
+   "classificacao": "Intermediário",
+   "descricao": "Práticas em desenvolvimento"
+  },
+  {
+   "nivel": 4,
+   "faixa": "60% - 80%",
+   "classificacao": "Avançado",
+   "descricao": "Práticas consolidadas e sistematizadas"
+  },
+  {
+   "nivel": 5,
+   "faixa": "80% - 100%",
+   "classificacao": "Excelência",
+   "descricao": "Referência em práticas ESG"
+  }
+ ],
+ "mat": [
+  {
+   "fornecedor": "DOMUS AR CONDICIONADOS S/A",
+   "maturidade": 0.5,
+   "nivel": 3,
+   "classificacao": "Nível 3 - Intermediário",
+   "status": "⚡ ATENÇÃO"
+  },
+  {
+   "fornecedor": "FAZ TUDO AMBIENTAL S/A",
+   "maturidade": 0.09090909090909091,
+   "nivel": 1,
+   "classificacao": "Nível 1 - Inicial",
+   "status": "⚠️ CRÍTICO"
+  },
+  {
+   "fornecedor": "HABITAR ENGENHARIA S/A",
+   "maturidade": 0.38461538461538464,
+   "nivel": 2,
+   "classificacao": "Nível 2 - Básico",
+   "status": "⚠️ CRÍTICO"
+  },
+  {
+   "fornecedor": "SB LOCAÇÕES & EMPREENDIMENTOS",
+   "maturidade": 1,
+   "nivel": 5,
+   "classificacao": "Nível 5 - Excelência",
+   "status": "✅ OK"
+  },
+  {
+   "fornecedor": "VILA SERENA",
+   "maturidade": 0.8333333333333334,
+   "nivel": 5,
+   "classificacao": "Nível 5 - Excelência",
+   "status": "✅ OK"
+  }
+ ]
+}
