@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Observatório ESG & Território
 
-## Getting Started
+BI editorial cruzando **auditoria ESG da cadeia FORTRATEST** e **geografia do desmatamento da Mata Atlântica fluminense**.
 
-First, run the development server:
+> Autoria · **Bruna Andrade** · 2026
+
+## Páginas
+
+| Rota | Conteúdo |
+|---|---|
+| `/` | Visão executiva — KPIs cruzados, radar ESG, gauges de maturidade |
+| `/esg` | Auditoria ESG FORTRATEST — 5 fornecedores, 450 requisitos, 3 pilares |
+| `/geografia` | Desmatamento Mata Atlântica RJ · 2010–2024 |
+| `/municipios` | Ranking dos 91 municípios fluminenses |
+| `/riscos` | Mapa cross-dataset de riscos & oportunidades |
+
+## Fontes de dados
+
+- **MapBiomas** — Coleção de Transições do Uso da Terra (Mata Atlântica)
+- **Greenlegis · FORTRATEST** — Auditoria ESG 2026 (5 fornecedores, 3 pilares E/S/G)
+
+## Stack
+
+- **Next.js 16** (App Router, Turbopack) · **TypeScript**
+- **Tailwind CSS v4** com design tokens editoriais
+- **Recharts** para visualizações
+- Fonts: **Fraunces** (serif) + **Inter** (sans)
+
+## Desenvolvimento local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deploy no Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Importar este repositório em [vercel.com/new](https://vercel.com/new)
+2. Vercel autodetecta Next.js · nenhuma config extra
+3. Sugestão de domínio: `bruna-andrade-bi.vercel.app` ou domínio próprio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Alternativa via CLI:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -g vercel
+vercel --prod
+```
